@@ -10,12 +10,28 @@ This project is a Sign Language recognition system built using **Support Vector 
 - `PCA.pkl` – The pretrained PCA object used to reduce the dimensionality of the input features.
 - `sign_svmmodel.pkl` – The trained SVM model used for classifying the sign language gestures.
 
+## 🤖 Machine Learning Model Details
+
+- **Model Used**: Support Vector Machine (SVM)
+- **Why SVM?**  
+  SVM is effective in high-dimensional spaces and is particularly well-suited for classification tasks like image recognition. It works well with small to medium datasets and handles multi-class classification using a one-vs-rest strategy.
+
+- **Dimensionality Reduction**: PCA (Principal Component Analysis)  
+  Before training, PCA was applied to reduce the number of features from 784 (28×28 pixels) to 100 components. This helps:
+  - Improve model training speed
+  - Reduce overfitting
+  - Enhance generalization
 
 ## 📊 Dataset
 The model was trained on the [Sign Language MNIST dataset](https://www.kaggle.com/datasets/datamunge/sign-language-mnist) from Kaggle, which contains:
 - 28×28 grayscale images
 - Hand gestures representing letters A-Z (excluding J and Z which require motion)
 
+- **Training Overview**:
+  - Input data: 28×28 grayscale images → flattened to 784 features
+  - PCA applied → Reduced to the optimal number of components (100)
+  - Trained using SVM with 'C': 10, 'gamma': 'scale', 'kernel': 'rbf'
+  - Final model and PCA object saved using `joblib`
   
 ## 🧰 Technologies Used
 
