@@ -21,17 +21,17 @@ This project is a Sign Language recognition system built using **Support Vector 
   - Improve model training speed
   - Reduce overfitting
   - Enhance generalization
-
-## 📊 Dataset
-The model was trained on the [Sign Language MNIST dataset](https://www.kaggle.com/datasets/datamunge/sign-language-mnist) from Kaggle, which contains:
-- 28×28 grayscale images
-- Hand gestures representing letters A-Z (excluding J and Z which require motion)
-
+  
 - **Training Overview**:
   - Input data: 28×28 grayscale images → flattened to 784 features
   - PCA applied → Reduced to the optimal number of components (100)
   - Trained using SVM with 'C': 10, 'gamma': 'scale', 'kernel': 'rbf'
   - Final model and PCA object saved using `joblib`
+
+## 📊 Dataset
+The model was trained on the [Sign Language MNIST dataset](https://www.kaggle.com/datasets/datamunge/sign-language-mnist) from Kaggle, which contains:
+- 28×28 grayscale images
+- Hand gestures representing letters A-Z (excluding J and Z which require motion)
   
 ## 🧰 Technologies Used
 
