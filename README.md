@@ -59,7 +59,7 @@ You can try out the app using the images in the [`sample_images`](sample_images)
 
 Example:
 - [A.png](sample_images/A.png)
-- [G (2).png](sample_images/G (2).png)
+- [G.png](sample_images/G.png)
 
 
 Make sure each image is:
