@@ -9,6 +9,8 @@ This project is a Sign Language recognition system built using **Support Vector 
 - `sign_language_SVC.py` – The **Streamlit web app** that loads the model and allows users to make predictions.
 - `PCA.pkl` – The pretrained PCA object used to reduce the dimensionality of the input features.
 - `sign_svmmodel.pkl` – The trained SVM model used for classifying the sign language gestures.
+- `knn_model.pkl` – Trained KNN model.
+- `knn_experiments.ipynb` – Notebook for KNN evaluation and testing.
 
 ## 🤖 Machine Learning Model Details
 
@@ -21,6 +23,12 @@ This project is a Sign Language recognition system built using **Support Vector 
   - Improve model training speed
   - Reduce overfitting
   - Enhance generalization
+ 
+    ### 🔎 K-Nearest Neighbors (KNN)
+
+- **Why KNN?**  
+  A simple, instance-based classifier that's easy to implement and often surprisingly effective.
+
   
 - **Training Overview**:
   - Input data: 28×28 grayscale images → flattened to 784 features
@@ -43,6 +51,48 @@ The model was trained on the [Sign Language MNIST dataset](https://www.kaggle.co
 - NumPy, Pandas  
 - joblib (for saving/loading models)
 
+
+## ⚙️ Preprocessing
+
+- Normalized pixel values by dividing by 255.
+- Flattened 28×28 images to 784 features.
+- Mapped numeric labels to alphabet characters.
+- PCA used:
+  - SVM: 100 components
+  - KNN: 50 components
+
+---
+
+## 📈 Model Comparison
+
+| Model | PCA Applied | Accuracy | Notes                        |
+|-------|-------------|----------|------------------------------|
+| SVM   | No          | ~89%     | Best overall performance     |
+| SVM   | Yes         | ~86%     | Slight drop, faster training |
+| KNN   | No          | ~85%     | Simple but slower            |
+| KNN   | Yes         | ~82%     | Fast but lower accuracy      |
+
+---
+
+## 🖼️ Visualizations & Analysis
+
+- Random prediction visualizations (correct/incorrect)
+- PCA scatter plots
+- Confusion matrices
+- Classification reports
+- Runtime comparisons
+
+---
+
+## 🚀 How to Run the Project
+
+### 🧪 SVM Web App
+
+1. **Clone the repo**:
+
+   ```bash
+   git clone https://github.com/kinzy4/sign_language_classifier.git
+   cd sign_language_classifier
 ## 🚀 How to Run the Project
 
 1. **Clone the repository**:
