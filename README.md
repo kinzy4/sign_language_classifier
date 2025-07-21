@@ -68,6 +68,8 @@ The model was trained on the [Sign Language MNIST dataset](https://www.kaggle.co
 - PCA (Principal Component Analysis)
 - NumPy, Pandas  
 - joblib (for saving/loading models)
+- KNN
+- Ensemble 
 
 
 ## ⚙️ Preprocessing
