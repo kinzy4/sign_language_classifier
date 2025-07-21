@@ -28,14 +28,32 @@ This project is a Sign Language recognition system built using **Support Vector 
 
 - **Why KNN?**  
   A simple, instance-based classifier that's easy to implement and often surprisingly effective.
-
+   
   
 - **Training Overview**:
   - Input data: 28×28 grayscale images → flattened to 784 features
   - PCA applied → Reduced to the optimal number of components (100)
   - Trained using SVM with 'C': 10, 'gamma': 'scale', 'kernel': 'rbf'
   - Final model and PCA object saved using `joblib`
+    
+ - ### 🔁 Ensemble Learning Experiments
+  In addition to SVM and KNN, this project explores the effectiveness of various **ensemble learning methods** to enhance performance on the Sign Language MNIST dataset.
+## 🧪 Experiment Summary
 
+| Model               | PCA Applied | Accuracy |
+|--------------------|-------------|----------|
+| Decision Tree       | Yes         | 45%      |
+| Bagging (DT)        | Yes         | 66%      |
+| Bagging (KNN)       | Yes         | 81%      |
+| Bagging (SVM)       | Yes         | **85%**  |
+| XGBoost             | Yes         | 72%      |
+| Random Forest       | Yes         | 80%      |
+| Stacking Ensemble   | Yes         | 73%      |
+
+- **BaggingClassifier**: Improved accuracy by aggregating multiple estimators (KNN and SVM showed significant gains).
+- **XGBoost**: Boosted performance with tuning (`max_depth`, `learning_rate`, `subsample`).
+- **Random Forest**: High accuracy using 300 trees.
+- **StackingClassifier**: Combined predictions from multiple models (RF, SVM, XGBoost) using Logistic Regression as a meta-learner.
 ## 📊 Dataset
 The model was trained on the [Sign Language MNIST dataset](https://www.kaggle.com/datasets/datamunge/sign-language-mnist) from Kaggle, which contains:
 - 28×28 grayscale images
