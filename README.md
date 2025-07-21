@@ -48,7 +48,7 @@ This project is a Sign Language recognition system built using **Support Vector 
 | Bagging (SVM)       | Yes         | **85%**  |
 | XGBoost             | Yes         | 72%      |
 | Random Forest       | Yes         | 80%      |
-| Stacking Ensemble   | Yes         | 73%      |
+| Stacking Ensemble   | Yes         | 85%      |
 
 - **BaggingClassifier**: Improved accuracy by aggregating multiple estimators (KNN and SVM showed significant gains).
 - **XGBoost**: Boosted performance with tuning (`max_depth`, `learning_rate`, `subsample`).
