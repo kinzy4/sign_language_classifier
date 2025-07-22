@@ -150,3 +150,6 @@ Example:
 
 Make sure each image is:
 - 28×28 pixels
+
+## 📽️ Youtube Video
+- We recorded a Youtube video where you can find a brief explanation of the project. You can watch it [here](https://www.youtube.com/watch?v=4j-wWK2OIsQ).
